@@ -39,7 +39,7 @@ function unicef_tap_options_page() {
 		wp_die( 'You need more permissions to access this page.' );
 	}
 
-	echo '<p>Welcome to our plugin page!';
+	require( 'inc/options-page-wrapper.php' );
 
 }
 
