@@ -11,8 +11,13 @@
 */
 
 /**
+* Assign global variables.
+*/
+
+$plugin_url = WP_PLUGIN_URL . '/unicef-tap-project-donation';
+
+/**
 * Add a link to plugin in the admin menu under 'Settings > UNICEF Tap'
-*
 */
 
 function unicef_tap_menu() {
@@ -39,6 +44,7 @@ function unicef_tap_options_page() {
 		wp_die( 'You need more permissions to access this page.' );
 	}
 
+	global $plugin_url;
 	require( 'inc/options-page-wrapper.php' );
 
 }
@@ -54,6 +60,7 @@ function register_plugin_styles() {
 	wp_register_style( 'unicef-tap-project-donation', plugins_url( 'unicef-tap-project-donation/css/plugin.css' ) );
 	wp_register_style( 'grid', plugins_url( 'unicef-tap-project-donation/css/plugin_grid.css' ) );
 	wp_register_style( 'nomalize', plugins_url( 'unicef-tap-project-donation/css/plugin_normalize.css' ) );
+
 	wp_enqueue_style( 'unicef-tap-project-donation' );
 	wp_enqueue_style( 'grid' );
 	wp_enqueue_style( 'nomalize' );
@@ -65,6 +72,7 @@ function register_plugin_styles() {
 
 function utp_top_banner() {
 
+	global $plugin_url;
 	require( 'inc/banner.php' );
 
 }
@@ -76,6 +84,7 @@ add_action('wp_head', 'utp_top_banner');
 
 function utp_bottom_banner() {
 
+	global $plugin_url;
 	require( 'inc/banner.php' );
 
 }

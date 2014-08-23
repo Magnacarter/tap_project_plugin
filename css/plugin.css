@@ -3,12 +3,40 @@ img {
 }
 
 .banner_headline h1 {
-	margin: 5px 0 5px 0;
-	text-align: center;
+	margin: 31px 0 5px 0px;
 	color: #004060;
 	font-weight: 700;
 	font-style: italic;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-family: Times,serif;
 	line-height: 1em;
 }
+
+.banner_logo {
+	margin: 8px 0 8px 0;
+}
+
+.banner_button {
+
+	margin: 22px 0 5px 0px;
+	background-color: #fff;
+}
+
+.banner_button button, input, select, textarea {
+	border: 2px solid #004767;
+	border-radius: 5px;
+	font-family: inherit;
+	padding: 6px;
+	padding: .6rem;
+	background-color: #fff;
+	text-transform: uppercase;
+	color: #004767;
+	font-weight: 300;
+}
+
+.banner_button button:hover {
+	color: #fff;
+}
+
+.banner_button input:hover {
+	background-color: #004767;
