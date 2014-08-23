@@ -43,13 +43,29 @@ function unicef_tap_options_page() {
 
 }
 
+// Register style sheet.
+add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
+
+/**
+ * Register style sheet.
+ */
+
+function register_plugin_styles() {
+	wp_register_style( 'unicef-tap-project-donation', plugins_url( 'unicef-tap-project-donation/css/plugin.css' ) );
+	wp_register_style( 'grid', plugins_url( 'unicef-tap-project-donation/css/plugin_grid.css' ) );
+	wp_register_style( 'nomalize', plugins_url( 'unicef-tap-project-donation/css/plugin_normalize.css' ) );
+	wp_enqueue_style( 'unicef-tap-project-donation' );
+	wp_enqueue_style( 'grid' );
+	wp_enqueue_style( 'nomalize' );
+}
+
 /**
 * Display a banner on the top of the page.
 */
 
 function utp_top_banner() {
 
-	echo '<p>Banner at the top of the page.</p>';
+	require( 'inc/banner.php' );
 
 }
 add_action('wp_head', 'utp_top_banner');
@@ -60,7 +76,7 @@ add_action('wp_head', 'utp_top_banner');
 
 function utp_bottom_banner() {
 
-	echo '<p>Banner at the bottom of the page.</p>';
+	require( 'inc/banner.php' );
 
 }
 add_action('wp_footer', 'utp_bottom_banner');

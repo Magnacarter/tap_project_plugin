@@ -1,0 +1,14 @@
+img {
+	max-width: 100%;
+}
+
+.banner_headline h1 {
+	margin: 5px 0 5px 0;
+	text-align: center;
+	color: #004060;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 2em;
+	font-family: Times,serif;
+	line-height: 1em;
+}
