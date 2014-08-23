@@ -43,17 +43,26 @@ function unicef_tap_options_page() {
 
 }
 
+/**
+* Display a banner on the top of the page.
+*/
 
+function utp_top_banner() {
 
+	echo '<p>Banner at the top of the page.</p>';
 
+}
+add_action('wp_head', 'utp_top_banner');
 
+/**
+* Display a banner on the bottom of the page.
+*/
 
+function utp_bottom_banner() {
 
+	echo '<p>Banner at the bottom of the page.</p>';
 
-
-
-
-
-
+}
+add_action('wp_footer', 'utp_bottom_banner');
 
 ?>
