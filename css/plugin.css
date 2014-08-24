@@ -7,11 +7,12 @@ img {
 }
 
 .banner_headline h1 {
-	margin: 31px 0 5px 0px;
+	margin: 30px 40px 5px 0px;
+	text-align: center;
 	color: #004060;
 	font-weight: 700;
 	font-style: italic;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	font-family: Times,serif;
 	line-height: 1em;
 }
@@ -21,26 +22,55 @@ img {
 }
 
 .banner_button {
-
-	margin: 22px 0 5px 0px;
-	background-color: #fff;
+	margin: 14px 0px 0px 60px;
+	padding: 0px 0px 0px 0px;
 }
 
-.banner_button button, input, select, textarea {
-	border: 2px solid #004767;
-	border-radius: 5px;
-	font-family: inherit;
-	padding: 6px;
-	padding: .6rem;
-	background-color: #fff;
+.banner_button {
+	-moz-box-shadow:inset 0px 0px 0px 0px;
+	-webkit-box-shadow:inset 0px 0px 0px 0px;
+	box-shadow:inset 0px 0px 0px 0px;
+	background-color:transparent;
+	-webkit-border-top-left-radius:5px;
+	-moz-border-radius-topleft:5px;
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	border-top-right-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-moz-border-radius-bottomright:5px;
+	border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomleft:5px;
+	border-bottom-left-radius:5px;
 	text-transform: uppercase;
+	text-indent:0px;
 	color: #004767;
-	font-weight: 300;
+	border:2px solid #004767;
+	display:inline-block;
+	font-family:arial;
+	font-size:1.2em;
+	font-weight:700;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	width:169px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 0px 0px;
 }
 
-.banner_button button:hover {
+.banner_button:active {
+	position:relative;
+	top:1px;
+}
+
+.banner_button:hover {
 	color: #fff;
+	background-color: #004767;
 }
 
-.banner_button input:hover {
-	background-color: #004767;
+
+
+
+
