@@ -1,6 +1,6 @@
-<div class="grid-container" style="background-color:<?php echo $background_color; ?>;">
+<div class="background" style="background-color:<?php echo $background_color; ?>;">
 
-	<div class="banner_background">
+	<div class="grid-container banner_background">
 
 		<div class="grid-30 banner_logo">
 			<a href="http://tap.unicefusa.org/" target="_blank"><img src="<?php echo $plugin_url . '/images/unicef.png'; ?>"></a>
