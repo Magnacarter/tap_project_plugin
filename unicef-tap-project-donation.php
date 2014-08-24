@@ -15,6 +15,7 @@
 */
 
 $plugin_url = WP_PLUGIN_URL . '/unicef-tap-project-donation';
+$options    = array();
 
 /**
 * Add a link to plugin in the admin menu under 'Settings > UNICEF Tap'
@@ -45,6 +46,33 @@ function unicef_tap_options_page() {
 	}
 
 	global $plugin_url;
+	global $options;
+
+	if( isset( $_POST['background_color_form_submitted'] ) ) {
+
+		$hidden_field = esc_html( $_POST['background_color_form_submitted'] );
+
+		if( $hidden_field == 'Y' ) {
+
+			$background_color = esc_html( $_POST['background_color'] );
+
+			$options['background_color'] = $background_color;
+			$options['last_updated']     = time();
+
+			update_option( 'unicef_tap', $options );
+
+		}
+
+	}
+
+	$options = get_option( 'unicef_tap' );
+
+		if( $options != '' ) {
+
+			$background_color = $options['background_color'];
+
+		}
+
 	require( 'inc/options-page-wrapper.php' );
 
 }
@@ -73,6 +101,33 @@ function register_plugin_styles() {
 function utp_top_banner() {
 
 	global $plugin_url;
+	global $options;
+
+	if( isset( $_POST['background_color_form_submitted'] ) ) {
+
+		$hidden_field = esc_html( $_POST['background_color_form_submitted'] );
+
+		if( $hidden_field == 'Y' ) {
+
+			$background_color = esc_html( $_POST['background_color'] );
+
+			$options['background_color'] = $background_color;
+			$options['last_updated']     = time();
+
+			update_option( 'unicef_tap', $options );
+
+		}
+
+	}
+
+	$options = get_option( 'unicef_tap' );
+
+		if( $options != '' ) {
+
+			$background_color = $options['background_color'];
+
+		}
+
 	require( 'inc/banner.php' );
 
 }
@@ -85,6 +140,33 @@ add_action('wp_head', 'utp_top_banner');
 function utp_bottom_banner() {
 
 	global $plugin_url;
+	global $options;
+
+	if( isset( $_POST['background_color_form_submitted'] ) ) {
+
+		$hidden_field = esc_html( $_POST['background_color_form_submitted'] );
+
+		if( $hidden_field == 'Y' ) {
+
+			$background_color = esc_html( $_POST['background_color'] );
+
+			$options['background_color'] = $background_color;
+			$options['last_updated']     = time();
+
+			update_option( 'unicef_tap', $options );
+
+		}
+
+	}
+
+	$options = get_option( 'unicef_tap' );
+
+		if( $options != '' ) {
+
+			$background_color = $options['background_color'];
+
+		}
+
 	require( 'inc/banner.php' );
 
 }
