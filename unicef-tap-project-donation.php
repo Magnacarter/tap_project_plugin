@@ -145,16 +145,16 @@ function footer_banner_callback() {
 */
 
 function utp_options_page() {
-    ?>
-    <div class="wrap">
-        <h2>UNICEF Tap Project Plugin Options</h2>
-        <form action="options.php" method="POST">
-            <?php settings_fields( 'utp-settings-group' ); ?>
-            <?php do_settings_sections( 'unicef-tap-project-plugin' ); ?>
-            <?php submit_button(); ?>
-        </form>
-    </div>
-    <?php
+	?>
+	<div class="wrap">
+	    <h2>UNICEF Tap Project Plugin Options</h2>
+	    <form action="options.php" method="POST">
+	        <?php settings_fields( 'utp-settings-group' ); ?>
+	        <?php do_settings_sections( 'unicef-tap-project-plugin' ); ?>
+	        <?php submit_button(); ?>
+	    </form>
+	</div>
+	<?php
 }
 
 ?>
