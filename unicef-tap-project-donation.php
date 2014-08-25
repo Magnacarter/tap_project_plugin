@@ -3,6 +3,7 @@
 /**
 * Plugin Name: UNICEF Tap Project Donation Plugin
 * Plugin URI: http://adamkristopher.com/unicef-tap-project-donation-plugin/
+* Text Domain: unicef-tap-project-donation
 * Description: Provides a banner in the footer of a page that provides a link to the donation page at UNICEF Tap Project.
 * Version: 0.1
 * Author: Adam Carter
