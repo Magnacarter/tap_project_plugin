@@ -3,7 +3,7 @@
 	<div class="grid-container banner_background">
 
 		<div class="grid-30 banner_logo">
-			<a href="http://tap.unicefusa.org/" target="_blank"><img src="<?php echo $plugin_url . '/images/unicef.png'; ?>"></a>
+			<a href="http://tap.unicefusa.org/" target="_blank"><?php echo '<img src="' . plugins_url( 'images/unicef.png' , dirname(__FILE__) ) . '" > '; ?></a>
 		</div>
 
 		<div class="grid-40 banner_headline">

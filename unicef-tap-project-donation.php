@@ -15,7 +15,6 @@
 * Assign global variables.
 */
 
-$plugin_url = WP_PLUGIN_URL . '/unicef-tap-project-donation';
 $options    = array();
 
 /**
