@@ -1,9 +1,9 @@
 <?php
 
 /**
-* Plugin Name: UNICEF Tap Project Donation Plugin
-* Plugin URI: http://adamkristopher.com/unicef-tap-project-donation-plugin/
-* Text Domain: unicef-tap-project-donation
+* Plugin Name: UNICEF Tap Project Plugin
+* Plugin URI: http://adamkristopher.com/unicef-tap-project-plugin/
+* Text Domain: unicef-tap-project-plugin
 * Description: Provides a banner in the footer of a page that provides a link to the donation page at UNICEF Tap Project.
 * Version: 0.1
 * Author: Adam Carter
@@ -11,186 +11,70 @@
 *
 */
 
-/**
-* Assign global variables.
-*/
+add_action( 'admin_menu', 'utp_admin_menu' );
 
-$options    = array();
+function utp_admin_menu() {
 
-/**
-* Add a link to plugin in the admin menu under 'Settings > UNICEF Tap'
-*/
+	add_options_page( 'UNICEF Tap Project Plugin',
+					  'UNICEF Tap Project Plugin',
+					  'manage_options',
+					  'unicef-tap-project-plugin',
+					  'utp_options_page'
+					  );
 
-function unicef_tap_menu() {
+}
 
-	/**
-	* Use the add_options_page function
-	* add_options_page( $page_title, $menu_title, $capability, $menu-slug, $function )
-	*/
+add_action( 'admin_init', 'utp_admin_init' );
 
-	add_options_page(
-		'UNICEF Tap Project Donation Plugin',
-		'UNICEF Tap Project Donation Plugin',
-		'manage_options',
-		'unicef-tap-project-donation-plugin',
-		'unicef_tap_options_page'
+function utp_admin_init() {
+
+	register_setting( 'utp-settings-group',
+					  'utp-setting'
+	);
+
+	add_settings_section( 'section-one',
+						  'Section One',
+						  'section_one_callback',
+						  'unicef-tap-project-plugin'
+	);
+
+	add_settings_field( 'field-one',
+						'Field One',
+						'field_one_callback',
+						'unicef-tap-project-plugin',
+						'section-one'
 	);
 
 }
-add_action( 'admin_menu', 'unicef_tap_menu' );
 
-function unicef_tap_options_page() {
+function section_one_callback() {
 
-	if( !current_user_can( 'manage_options' ) ) {
-		wp_die( 'You need more permissions to access this page.' );
-	}
-
-	global $plugin_url;
-	global $options;
-
-	if( isset( $_POST['background_color_form_submitted'] ) || ( $_POST['placement_form_submitted'] ) ) {
-
-		$hidden_field = esc_html( $_POST['background_color_form_submitted'] ) || ( $_POST['placement_form_submitted'] );
-
-		if( $hidden_field == 'Y' || 'P') {
-
-			$background_color = esc_html( $_POST['background_color'] );
-			$headline_color   = esc_html( $_POST['headline_color'] );
-			$button_color     = esc_html( $_POST['button_color']);
-			$header           = ( $_POST['header'] );
-			$footer           = ( $_POST['footer'] );
-
-			$options['background_color'] = $background_color;
-			$options['headline_color']   = $headline_color;
-			$options['button_color']     = $button_color;
-			$options['header']           = $header;
-			$options['footer']           = $footer;
-			$options['last_updated']     = time();
-
-			update_option( 'unicef_tap', $options );
-
-		}
-
-	}
-
-	$options = get_option( 'unicef_tap' );
-
-		if( $options != '' ) {
-
-			$background_color = $options['background_color'];
-			$headline_color   = $options['headline_color'];
-			$button_color     = $options['button_color'];
-			$header           = $options['header'];
-			$footer           = $options['footer'];
-
-		}
-
-	require( 'inc/options-page-wrapper.php' );
+	echo 'Some help text goes here.';
 
 }
 
-// Register style sheet.
-add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
+function field_one_callback() {
 
-/**
- * Register style sheet.
- */
+	$setting = esc_attr( get_option( 'utp-setting' ) );
 
-function register_plugin_styles() {
-	wp_register_style( 'unicef-tap-project-donation', plugins_url( 'unicef-tap-project-donation/css/plugin.css' ) );
-
-	wp_enqueue_style( 'unicef-tap-project-donation' );
+	echo "<input type='text' name='utp-setting' value='$setting' />";
 
 }
 
-/**
-* Display a banner on the top of the page.
-*/
-
-function utp_top_banner() {
-
-	global $plugin_url;
-	global $options;
-
-	if( isset( $_POST['background_color_form_submitted'] ) ) {
-
-		$hidden_field = esc_html( $_POST['background_color_form_submitted'] );
-
-		if( $hidden_field == 'Y' ) {
-
-			$background_color = esc_html( $_POST['background_color'] );
-			$headline_color   = esc_html( $_POST['headline_color'] );
-			$button_color     = esc_html( $_POST['button_color']);
-
-			$options['background_color'] = $background_color;
-			$options['headline_color']   = $headline_color;
-			$options['button_color']     = $button_color;
-			$options['last_updated']     = time();
-
-			update_option( 'unicef_tap', $options );
-
-		}
-
-	}
-
-	$options = get_option( 'unicef_tap' );
-
-		if( $options != '' ) {
-
-			$background_color = $options['background_color'];
-			$headline_color   = $options['headline_color'];
-			$button_color     = $options['button_color'];
-
-		}
-
-	require( 'inc/banner.php' );
-
+function utp_options_page() {
+    ?>
+    <div class="wrap">
+        <h2>UNICEF Tap Project Plugin Options</h2>
+        <form action="options.php" method="POST">
+            <?php settings_fields( 'utp-settings-group' ); ?>
+            <?php do_settings_sections( 'unicef-tap-project-plugin' ); ?>
+            <?php submit_button(); ?>
+        </form>
+    </div>
+    <?php
 }
-add_action('wp_head', 'utp_top_banner');
 
-/**
-* Display a banner on the bottom of the page.
-*/
 
-function utp_bottom_banner() {
 
-	global $plugin_url;
-	global $options;
-
-	if( isset( $_POST['background_color_form_submitted'] ) ) {
-
-		$hidden_field = esc_html( $_POST['background_color_form_submitted'] );
-
-		if( $hidden_field == 'Y' ) {
-
-			$background_color = esc_html( $_POST['background_color'] );
-			$headline_color   = esc_html( $_POST['headline_color'] );
-			$button_color     = esc_html( $_POST['button_color']);
-
-			$options['background_color'] = $background_color;
-			$options['headline_color']   = $headline_color;
-			$options['button_color']     = $button_color;
-			$options['last_updated']     = time();
-
-			update_option( 'unicef_tap', $options );
-
-		}
-
-	}
-
-	$options = get_option( 'unicef_tap' );
-
-		if( $options != '' ) {
-
-			$background_color = $options['background_color'];
-			$headline_color   = $options['headline_color'];
-			$button_color     = $options['button_color'];
-
-		}
-
-	require( 'inc/banner.php' );
-
-}
-add_action('wp_footer', 'utp_bottom_banner');
 
 ?>
