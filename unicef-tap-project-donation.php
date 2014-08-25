@@ -31,7 +31,7 @@ function unicef_tap_menu() {
 
 	add_options_page(
 		'UNICEF Tap Project Donation Plugin',
-		'UNICEF Tap',
+		'UNICEF Tap Project Donation Plugin',
 		'manage_options',
 		'unicef-tap-project-donation-plugin',
 		'unicef_tap_options_page'
