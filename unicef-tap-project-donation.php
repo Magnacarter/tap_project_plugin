@@ -41,22 +41,28 @@ add_action( 'admin_menu', 'unicef_tap_menu' );
 
 function unicef_tap_options_page() {
 
-	if( !current_user_can( 'manage_options' ) ) {
-		wp_die( 'You need more permissions to access this page.' );
-	}
+
 
 	global $plugin_url;
 	global $options;
 
-	if( isset( $_POST['background_color_form_submitted'] ) ) {
+	if( isset( $_POST['background_color_form_submitted'] ) || ( $_POST['placement_form_submitted'] ) ) {
 
-		$hidden_field = esc_html( $_POST['background_color_form_submitted'] );
+		$hidden_field = esc_html( $_POST['background_color_form_submitted'] ) || ( $_POST['placement_form_submitted'] );
 
-		if( $hidden_field == 'Y' ) {
+		if( $hidden_field == 'Y' || 'P') {
 
 			$background_color = esc_html( $_POST['background_color'] );
+			$headline_color   = esc_html( $_POST['headline_color'] );
+			$button_color     = esc_html( $_POST['button_color']);
+			$header           = ( $_POST['header'] );
+			$footer           = ( $_POST['footer'] );
 
 			$options['background_color'] = $background_color;
+			$options['headline_color']   = $headline_color;
+			$options['button_color']     = $button_color;
+			$options['header']           = $header;
+			$options['footer']           = $footer;
 			$options['last_updated']     = time();
 
 			update_option( 'unicef_tap', $options );
@@ -70,6 +76,10 @@ function unicef_tap_options_page() {
 		if( $options != '' ) {
 
 			$background_color = $options['background_color'];
+			$headline_color   = $options['headline_color'];
+			$button_color     = $options['button_color'];
+			$header           = $options['header'];
+			$footer           = $options['footer'];
 
 		}
 
@@ -100,6 +110,8 @@ function register_plugin_styles() {
 
 function utp_top_banner() {
 
+
+
 	global $plugin_url;
 	global $options;
 
@@ -110,8 +122,12 @@ function utp_top_banner() {
 		if( $hidden_field == 'Y' ) {
 
 			$background_color = esc_html( $_POST['background_color'] );
+			$headline_color   = esc_html( $_POST['headline_color'] );
+			$button_color     = esc_html( $_POST['button_color']);
 
 			$options['background_color'] = $background_color;
+			$options['headline_color']   = $headline_color;
+			$options['button_color']     = $button_color;
 			$options['last_updated']     = time();
 
 			update_option( 'unicef_tap', $options );
@@ -125,6 +141,8 @@ function utp_top_banner() {
 		if( $options != '' ) {
 
 			$background_color = $options['background_color'];
+			$headline_color   = $options['headline_color'];
+			$button_color     = $options['button_color'];
 
 		}
 
@@ -139,6 +157,8 @@ add_action('wp_head', 'utp_top_banner');
 
 function utp_bottom_banner() {
 
+
+
 	global $plugin_url;
 	global $options;
 
@@ -149,8 +169,12 @@ function utp_bottom_banner() {
 		if( $hidden_field == 'Y' ) {
 
 			$background_color = esc_html( $_POST['background_color'] );
+			$headline_color   = esc_html( $_POST['headline_color'] );
+			$button_color     = esc_html( $_POST['button_color']);
 
 			$options['background_color'] = $background_color;
+			$options['headline_color']   = $headline_color;
+			$options['button_color']     = $button_color;
 			$options['last_updated']     = time();
 
 			update_option( 'unicef_tap', $options );
@@ -164,6 +188,8 @@ function utp_bottom_banner() {
 		if( $options != '' ) {
 
 			$background_color = $options['background_color'];
+			$headline_color   = $options['headline_color'];
+			$button_color     = $options['button_color'];
 
 		}
 

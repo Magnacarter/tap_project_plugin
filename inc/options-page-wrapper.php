@@ -14,7 +14,7 @@
 
 					<div class="postbox">
 
-						<h3><span>Select Banner Settings</span></h3>
+						<h3><span>Select hexidecimel color values that compliment your site or leave the default colors by leaving the inputs blank.</span></h3>
 
 						<div class="inside">
 
@@ -33,6 +33,24 @@
 										</td>
 									</tr>
 
+									<tr>
+										<td>
+											<label for="headline_color">Enter a value for the headline color</label>
+										</td>
+										<td>
+											<input name="headline_color" id="headline_color" type="text" value="" class="regular-text" />
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<label for="button_color">Enter a value for the button color</label>
+										</td>
+										<td>
+											<input name="button_color" id="button_color" type="text" value="" class="regular-text" />
+										</td>
+									</tr>
+
 								</table>
 
 								<p>
@@ -40,6 +58,24 @@
 								</p>
 
 							</form>
+
+							<h2>Select the placement of the banner on your site.</h2>
+
+							<form name="placement_form" method="post" action="">
+
+								<input type="hidden" name="placement_form_submitted" value="P">
+
+									<select name="placement_form" id="placement_form">
+										<option selected="selected" value="header">Header</option>
+										<option value="footer">Footer</option>
+									</select>
+
+									<p>
+										<input class="button-primary" type="submit" name="placement_submit" value="Save" />
+									</p>
+
+							</form>
+
 						</div> <!-- .inside -->
 
 					</div> <!-- .postbox -->
@@ -49,7 +85,7 @@
 			</div> <!-- post-body-content -->
 
 			<!-- sidebar -->
-			<?php if( isset( $background_color ) && $background_color != '' ): ?>
+			<?php if( isset( $background_color ) && $background_color != '' || $headline_color != '' || $button_color != '' ): ?>
 
 			<div id="postbox-container-1" class="postbox-container">
 
@@ -66,8 +102,18 @@
 								<input type="hidden" name="background_color_form_submitted" value="Y">
 
 								<p>
-									<label for="background_color">Enter a new value for the background color</label>
+									<label for="background_color">Enter a value for the background color.</label>
 									<input name="background_color" id="backgound_color" type="text" value="<?php echo $background_color; ?>" />
+								</p>
+
+								<p>
+									<label for="headline_color">Enter a value for the headline color.</label>
+									<input name="headline_color" id="headline_color" type="text" value="<?php echo $headline_color; ?>" />
+								</p>
+
+								<p>
+									<label for="button_color">Enter a value for the button color.</label>
+									<input name="button_color" id="headline_color" type="text" value="<?php echo $button_color; ?>" />
 								</p>
 
 								<p>
@@ -76,7 +122,24 @@
 
 							</form>
 
-			<?php endif; ?>
+							<?php endif; ?>
+
+							<form name="placement_form" method="post" action="">
+
+								<input type="hidden" name="placement_form_submitted" value="P">
+
+									<select name="placement_form" id="placement_form">
+										<option selected="selected" value="header">Header</option>
+										<option value="footer">Footer</option>
+									</select>
+
+								<p>
+									<input class="button-primary" type="submit" name="placement_submit" value="Update" />
+								</p>
+
+							<?php echo $footer; ?>
+
+							</form>
 
 						</div> <!-- .inside -->
 
