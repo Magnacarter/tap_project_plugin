@@ -10,6 +10,22 @@
 * Author URI: http://adamkristopher.com
 */
 
+if ( ! defined( 'UTP_PLUGIN' ) ) {
+    define( 'UTP_PLUGIN', plugin_basename( __FILE__ ) );
+}
+
+if ( ! defined( 'UTP_PLUGIN_DIR' ) ) {
+    define( 'UTP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+}
+
+if ( ! defined( 'UTP_PLUGIN_URL' ) ) {
+    define( 'UTP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+}
+
+if ( ! defined( 'UTP_PLUGIN_INC_DIR' ) ) {
+    define( 'UTP_PLUGIN_INC_DIR', UTP_PLUGIN_DIR . 'inc/' );
+}
+
 // Register style sheet.
 add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
 
@@ -179,7 +195,7 @@ function utp_options_page() {
 
 function utp_header_banner() {
 
-	require_once( 'inc/options.php' );
+	require_once UTP_PLUGIN_INC_DIR . 'options.php';
 
 }
 add_action('wp_head', 'utp_header_banner');
@@ -190,7 +206,7 @@ add_action('wp_head', 'utp_header_banner');
 
 function utp_footer_banner() {
 
-	require_once( 'inc/options.php' );
+	require_once UTP_PLUGIN_INC_DIR . 'options.php';
 
 }
 add_action('wp_footer', 'utp_footer_banner');

@@ -2,7 +2,8 @@
 <div class="utp_banner_body" style="background-color:<?php echo esc_attr( $background_color ); ?>;">
 
 	<a href="http://tap.unicefusa.org/" target="_blank">
-	<?php echo '<img src="' . plugins_url( 'images/unicef.png' , dirname(__FILE__) ) . '" > '; ?></a>
+		<img src="<?php echo esc_url( UTP_PLUGIN_URL . 'images/unicef.png' ); ?>" />
+	</a>
 
 	<h1 style="color:<?php echo esc_attr( $headline_color ); ?>;"><?php _e( 'Every heart needs water', 'unicef-tap-project-plugin' ); ?>.</h1>
 
