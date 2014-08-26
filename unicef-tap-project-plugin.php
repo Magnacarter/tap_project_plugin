@@ -54,35 +54,35 @@ function utp_admin_init() {
 	);
 
 	//Add Fields
-	add_settings_field  ( 'background-color',
+	add_settings_field  ( 'background_color',
 						  'Background Color',
 						  'background_color_callback',
 						  'unicef-tap-project-plugin',
 						  'section-one'
 	);
 
-	add_settings_field  ( 'headline-color',
+	add_settings_field  ( 'headline_color',
 						  'Headline Color',
 						  'headline_color_callback',
 						  'unicef-tap-project-plugin',
 						  'section-one'
 	);
 
-	add_settings_field  ( 'button-color',
+	add_settings_field  ( 'button_color',
 						  'Button Color',
 						  'button_color_callback',
 						  'unicef-tap-project-plugin',
 						  'section-one'
 	);
 
-	add_settings_field  ( 'header-banner',
+	add_settings_field  ( 'header_banner',
 						  'Header Banner',
 						  'header_banner_callback',
 						  'unicef-tap-project-plugin',
 						  'section-two'
 	);
 
-	add_settings_field  ( 'footer-banner',
+	add_settings_field  ( 'footer_banner',
 						  'Footer Banner',
 						  'footer_banner_callback',
 						  'unicef-tap-project-plugin',
@@ -114,27 +114,27 @@ function section_two_callback() {
 function background_color_callback() {
 
 	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
-	$background_color = esc_attr( $settings['background-color'] );
+	$background_color = esc_attr( $settings['background_color'] );
 
-	echo "<input type='text' name='utp-settings[background-color]' value='$background_color' />";
+	echo "<input type='text' name='utp-settings[background_color]' value='$background_color' />";
 
 }
 
 function headline_color_callback() {
 
 	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
-	$headline_color   = esc_attr( $settings['headline-color'] );
+	$headline_color   = esc_attr( $settings['headline_color'] );
 
-	echo "<input type='text' name='utp-settings[headline-color]' value='$headline_color' />";
+	echo "<input type='text' name='utp-settings[headline_color]' value='$headline_color' />";
 
 }
 
 function button_color_callback() {
 
 	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
-	$button_color     = esc_attr( $settings['button-color'] );
+	$button_color     = esc_attr( $settings['button_color'] );
 
-	echo "<input type='text' name='utp-settings[button-color]' value='$button_color' />";
+	echo "<input type='text' name='utp-settings[button_color]' value='$button_color' />";
 
 }
 
@@ -143,7 +143,7 @@ function header_banner_callback() {
 	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
 	$header_banner    = esc_attr( $settings['header_banner'] );
 
-	echo "<input type='radio' name='utp-settings[header-banner]' value='$header_banner' />";
+	echo "<input type='radio' name='utp-settings[header_banner]' value='$header_banner' />";
 
 }
 
@@ -152,7 +152,7 @@ function footer_banner_callback() {
 	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
 	$footer_banner    = esc_attr( $settings['footer_banner'] );
 
-	echo "<input type='radio' name='utp-settings[footer-banner]' value='$footer_banner' />";
+	echo "<input type='radio' name='utp-settings[footer_banner]' value='$footer_banner' />";
 
 }
 
@@ -163,7 +163,7 @@ function footer_banner_callback() {
 function utp_options_page() {
 	?>
 	<div class="wrap">
-	    <h2>UNICEF Tap Project Plugin Options</h2>
+	    <h2><?php _e( 'UNICEF Tap Project Plugin Options', 'unicef-tap-project-plugin'); ?></h2>
 	    <form action="options.php" method="POST">
 	        <?php settings_fields( 'utp-settings-group' ); ?>
 	        <?php do_settings_sections( 'unicef-tap-project-plugin' ); ?>
@@ -179,7 +179,7 @@ function utp_options_page() {
 
 function utp_header_banner() {
 
-	require( 'inc/options.php' );
+	require_once( 'inc/options.php' );
 
 }
 add_action('wp_head', 'utp_header_banner');
@@ -190,7 +190,7 @@ add_action('wp_head', 'utp_header_banner');
 
 function utp_footer_banner() {
 
-	require( 'inc/options.php' );
+	require_once( 'inc/options.php' );
 
 }
 add_action('wp_footer', 'utp_footer_banner');
