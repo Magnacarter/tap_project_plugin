@@ -170,18 +170,9 @@ function utp_settings_page() {
 /**
  * Display a donate banner on the page
  *
- * @action wp_head
  * @action wp_footer
  */
 function utp_display_banner() {
 	require_once UTP_PLUGIN_DIR . 'banner.php';
 }
-
-$settings  = get_option( 'utp-settings', array() );
-$placement = isset( $settings['placement'] ) ? $settings['placement'] : 'footer';
-
-if ( 'header' === $placement ) {
-	add_action( 'wp_head', 'utp_display_banner' );
-} else {
-	add_action( 'wp_footer', 'utp_display_banner' );
-}
+add_action( 'wp_footer', 'utp_display_banner' );
