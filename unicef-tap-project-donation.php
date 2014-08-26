@@ -27,10 +27,12 @@ add_action( 'admin_init', 'utp_admin_init' );
 
 function utp_admin_init() {
 
+	//Register with WP
 	register_setting    ( 'utp-settings-group',
-						  'utp-setting'
+						  'utp-settings'
 	);
 
+	//Add Sections
 	add_settings_section( 'section-one',
 						  'Select Banner Colors',
 						  'section_one_callback',
@@ -43,6 +45,7 @@ function utp_admin_init() {
 						  'unicef-tap-project-plugin'
 	);
 
+	//Add Fields
 	add_settings_field  ( 'background-color',
 						  'Background Color',
 						  'background_color_callback',
@@ -102,41 +105,46 @@ function section_two_callback() {
 
 function background_color_callback() {
 
-	$setting = esc_attr( get_option( 'utp-setting' ) );
+	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
+	$background_color = esc_attr( $settings['background-color'] );
 
-	echo "<input type='text' name='utp-setting' value='$setting' />";
+	echo "<input type='text' name='utp-settings[background-color]' value='$background_color' />";
 
 }
 
 function headline_color_callback() {
 
-	$setting = esc_attr( get_option( 'utp-setting' ) );
+	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
+	$headline_color   = esc_attr( $settings['headline-color'] );
 
-	echo "<input type='text' name='utp-setting' value='$setting' />";
+	echo "<input type='text' name='utp-settings[headline-color]' value='$headline_color' />";
 
 }
 
 function button_color_callback() {
 
-	$setting = esc_attr( get_option( 'utp-setting' ) );
+	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
+	$button_color     = esc_attr( $settings['button-color'] );
 
-	echo "<input type='text' name='utp-setting' value='$setting' />";
+	echo "<input type='text' name='utp-settings[button-color]' value='$button_color' />";
 
 }
 
 function header_banner_callback() {
 
-	$setting = esc_attr( get_option( 'utp-setting' ) );
+	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
+	$header_banner    = esc_attr( $settings['header_banner'] );
 
-	echo "<input type='radio' name='utp-setting' value='$setting' />";
+	echo "<input type='radio' name='utp-settings[header-banner]' value='$header_banner' />";
 
 }
 
 function footer_banner_callback() {
 
-	$setting = esc_attr( get_option( 'utp-setting' ) );
+	$settings         = (array) esc_attr( get_option( 'utp-settings' ) );
+	$footer_banner    = esc_attr( $settings['footer_banner'] );
 
-	echo "<input type='radio' name='utp-setting' value='$setting' />";
+	echo "<input type='radio' name='utp-settings[footer-banner]' value='$footer_banner' />";
 
 }
 
