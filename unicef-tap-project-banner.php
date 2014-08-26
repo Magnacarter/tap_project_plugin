@@ -137,7 +137,7 @@ function utp_settings_page() {
 				console.log( 'hello' );
 				var $this = jQuery( this );
 
-				$this.parent().find( '.utp-color-picker' ).show();
+				$this.next( '.utp-color-picker' ).show();
 			});
 			jQuery( '.utp-color-picker-input' ).on( 'focusout', function() {
 				var $this = jQuery( this );
