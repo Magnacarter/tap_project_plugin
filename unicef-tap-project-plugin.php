@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Plugin Name: UNICEF Tap Project Plugin
-* Plugin URI: http://adamkristopher.com/unicef-tap-project-plugin/
+* Plugin Name: UNICEF Tap Project Banner
+* Plugin URI: http://adamkristopher.com/unicef-tap-project-banner/
 * Text Domain: unicef-tap-project-plugin
 * Description: Provides a banner in the footer of a page that provides a link to the donation page at UNICEF Tap Project.
 * Version: 0.1
