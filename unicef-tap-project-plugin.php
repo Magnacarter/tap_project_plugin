@@ -10,6 +10,13 @@
 * Author URI: http://adamkristopher.com
 */
 
+// Register style sheet.
+add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
+
+function register_plugin_styles() {
+	wp_register_style( 'unicef-tap-project-plugin', plugins_url( 'unicef-tap-project-plugin/css/plugin.css' ) );
+}
+
 add_action( 'admin_menu', 'utp_admin_menu' );
 
 function utp_admin_menu() {
@@ -164,5 +171,29 @@ function utp_options_page() {
 	</div>
 	<?php
 }
+
+/**
+* Display a banner on the top of the page.
+*/
+
+function utp_header_banner() {
+
+	require( 'inc/options.php' );
+
+}
+add_action('wp_head', 'utp_header_banner');
+
+/**
+* Display a banner on the top of the page.
+*/
+
+function utp_footer_banner() {
+
+	require( 'inc/options.php' );
+
+}
+add_action('wp_footer', 'utp_footer_banner');
+
+
 
 ?>
