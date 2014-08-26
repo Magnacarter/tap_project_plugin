@@ -15,8 +15,10 @@ add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
 
 function register_plugin_styles() {
 	wp_register_style( 'unicef-tap-project-plugin', plugins_url( 'unicef-tap-project-plugin/css/plugin.css' ) );
+	wp_enqueue_style( 'unicef-tap-project-plugin' );
 }
 
+//Add options to Settings menu
 add_action( 'admin_menu', 'utp_admin_menu' );
 
 function utp_admin_menu() {
@@ -29,7 +31,6 @@ function utp_admin_menu() {
 					  );
 
 }
-
 add_action( 'admin_init', 'utp_admin_init' );
 
 function utp_admin_init() {
