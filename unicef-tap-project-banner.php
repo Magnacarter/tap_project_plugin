@@ -4,8 +4,8 @@
  * Plugin URI: http://adamkristopher.com/unicef-tap-project-banner/
  * Description: Displays a simple donate banner in the header or footer of your website so your visitors can participate in the UNICEF Tap Project. Learn more at https://thewaterproject.org
  * Version: 0.1.0
- * Author: Adam Carter
- * Author URI: http://adamkristopher.com
+ * Author: Adam Carter & Frankie Jarrett
+ * Author URI: http://adamkristopher.com, http://fjarrett.com
  * License: GPLv2+
  * Text Domain: unicef-tap-project-banner
  */
