@@ -17,6 +17,11 @@ Learn more at https://thewaterproject.org/
 
 This plugin is in no way officially affiliated with the charity.
 
+== Screenshots ==
+
+1. Customizable colors so the banner will compliment your website. Choose placement in the header or footer.
+2. The banner.
+
 == Changelog ==
 
 = 0.1.0 - August 27, 2014 =
