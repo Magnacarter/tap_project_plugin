@@ -23,7 +23,7 @@ if ( ! defined( 'UTP_PLUGIN_URL' ) ) {
 }
 
 if ( ! defined( 'UTP_DONATE_LINK' ) ) {
-	define( 'UTP_DONATE_LINK', 'https://www.unicefusa.org/donate/donate-unicef-tap-project/16034?pcode=WB_XXXTAP15YXXXX' );
+	define( 'UTP_DONATE_LINK', 'https://www.unicefusa.org/donate/donate-end-preventable-deaths-children' );
 }
 
 /**
