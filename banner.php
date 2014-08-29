@@ -78,13 +78,13 @@ body {
 
 <div class="utp-banner-container">
 
-	<a href="http://tap.unicefusa.org/" target="_blank" class="utp-banner-logo-link">
+	<a href="<?php echo esc_url( UTP_HOMEPAGE_URL ) ?>" target="_blank" class="utp-banner-logo-link">
 		<img src="<?php echo esc_url( UTP_PLUGIN_URL . 'images/unicef-tap-project.png' ); ?>" />
 	</a>
 
 	<span class="utp-banner-heading"><?php _e( 'Every heart needs water.', 'unicef-tap-project-banner' ); ?></span>
 
-	<a href="<?php echo esc_url( UTP_DONATE_LINK ); ?>" target="_blank" class="utp-banner-button">
+	<a href="<?php echo esc_url( UTP_DONATE_URL ); ?>" target="_blank" class="utp-banner-button">
 		<?php _e( 'Donate', 'unicef-tap-project-banner' ); ?>
 	</a>
 

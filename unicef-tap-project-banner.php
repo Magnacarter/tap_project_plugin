@@ -33,7 +33,8 @@ class UTP_Banner_Plugin {
 		define( 'UTP_PLUGIN', plugin_basename( __FILE__ ) );
 		define( 'UTP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 		define( 'UTP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-		define( 'UTP_DONATE_LINK', 'https://www.unicefusa.org/donate/donate-end-preventable-deaths-children' );
+		define( 'UTP_HOMEPAGE_URL', 'http://uniceftapproject.org' );
+		define( 'UTP_DONATE_URL', 'https://www.unicefusa.org/donate/donate-unicef-tap-project/16034' );
 
 		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ) );
