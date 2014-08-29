@@ -15,7 +15,7 @@ Displays a simple donate banner in the header or footer of your website so your 
 
 Learn more at https://thewaterproject.org/
 
-This plugin is in no way officially affiliated with UNICEF. By displaying this banner on your website you are agreeing to the [UNICEF linking guidelines](http://www.unicef.org/about/legal_linking.html).
+By displaying this banner on your website you are agreeing to the [UNICEF linking guidelines](http://www.unicef.org/about/legal_linking.html). This plugin is in no way officially affiliated with UNICEF.
 
 **Development of this plugin is done [on GitHub](https://github.com/Magnacarter/unicef-tap-project-banner). Pull requests welcome. Please see [issues](https://github.com/Magnacarter/unicef-tap-project-banner/issues) reported there before going to the plugin forum.**
 

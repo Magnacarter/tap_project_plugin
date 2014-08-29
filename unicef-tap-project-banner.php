@@ -221,8 +221,8 @@ class UTP_Banner_Plugin {
 				<?php do_settings_sections( 'unicef-tap-project-banner' ); ?>
 				<?php submit_button(); ?>
 			</form>
-			<p><em><?php _e( 'This plugin is in no way officially affiliated with UNICEF.', 'unicef-tap-project-banner' ); ?></em></p>
 			<p><em><?php printf( __( 'By displaying this banner on your website you are agreeing to the <a href="%s" target="_blank">UNICEF linking guidelines</a>.', 'unicef-tap-project-banner' ), esc_url( 'http://www.unicef.org/about/legal_linking.html' ) ); ?></em></p>
+			<p><em><?php _e( 'This plugin is in no way officially affiliated with UNICEF.', 'unicef-tap-project-banner' ); ?></em></p>
 		</div>
 		<?php
 	}
