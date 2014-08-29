@@ -1,7 +1,7 @@
 === UNICEF Tap Project Banner ===
 Contributors:      adamcarter, fjarrett
 Tags:              charity, donations, donate, unicef, clean water
-Requires at least: 3.6
+Requires at least: 3.1
 Tested up to:      3.9.2
 Stable tag:        trunk
 License:           GPLv2 or later
