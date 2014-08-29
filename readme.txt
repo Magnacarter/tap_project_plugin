@@ -15,13 +15,15 @@ Displays a simple donate banner in the header or footer of your website so your 
 
 Learn more at https://thewaterproject.org/
 
-This plugin is in no way officially affiliated with the charity.
+This plugin is in no way officially affiliated with the charity. By using this plugin you are agreeing to [UNICEF's linking guidelines](http://www.unicef.org/about/legal_linking.html).
+
+**Development of this plugin is done [on GitHub](https://github.com/Magnacarter/unicef-tap-project-banner). Pull requests welcome. Please see [issues](https://github.com/Magnacarter/unicef-tap-project-banner/issues) reported there before going to the plugin forum.**
 
 == Screenshots ==
 
 1. Customizable colors so the banner will compliment your website. Choose placement in the header or footer.
-2. Example banner in Header
-3. Example banner in Footer
+2. Example of banner in the Header
+3. Example of banner in the Footer
 
 == Changelog ==
 
