@@ -13,7 +13,7 @@ Display a banner on your website encouraging visitors to donate to the UNICEF Ta
 
 Displays a simple donate banner in the header or footer of your website so your visitors can participate in giving to the UNICEF Tap Project.
 
-Learn more at https://thewaterproject.org/
+Learn more at [https://thewaterproject.org](https://thewaterproject.org)
 
 By displaying this banner on your website you are agreeing to the [UNICEF linking guidelines](http://www.unicef.org/about/legal_linking.html). This plugin is in no way officially affiliated with UNICEF.
 
