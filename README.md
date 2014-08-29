@@ -30,7 +30,7 @@ This plugin is in no way officially affiliated with the charity.
 
 ## Changelog ##
 
-### 0.1.0 - August 27, 2014 ###
+### 0.1.0 - August 29, 2014 ###
 Initial release!
 
 
