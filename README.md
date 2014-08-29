@@ -5,8 +5,8 @@ Display a banner on your website encouraging visitors to donate to the UNICEF Ta
 
 **Contributors:** [adamcarter](http://profiles.wordpress.org/adamcarter), [fjarrett](http://profiles.wordpress.org/fjarrett)  
 **Tags:** [charity](http://wordpress.org/plugins/tags/charity), [donations](http://wordpress.org/plugins/tags/donations), [donate](http://wordpress.org/plugins/tags/donate), [unicef](http://wordpress.org/plugins/tags/unicef), [clean water](http://wordpress.org/plugins/tags/clean water)  
-**Requires at least:** 3.5  
-**Tested up to:** 3.9.1  
+**Requires at least:** 3.6  
+**Tested up to:** 3.9.2  
 **Stable tag:** trunk (master)  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 
@@ -14,7 +14,7 @@ Display a banner on your website encouraging visitors to donate to the UNICEF Ta
 
 Displays a simple donate banner in the header or footer of your website so your visitors can participate in giving to the UNICEF Tap Project.
 
-Learn more at [https://thewaterproject.org](https://thewaterproject.org)
+Learn more at [http://uniceftapproject.org](http://uniceftapproject.org)
 
 By displaying this banner on your website you are agreeing to the [UNICEF linking guidelines](http://www.unicef.org/about/legal_linking.html). This plugin is in no way officially affiliated with UNICEF.
 
