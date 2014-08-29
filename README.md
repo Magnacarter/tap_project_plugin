@@ -24,9 +24,13 @@ This plugin is in no way officially affiliated with the charity.
 
 ![Customizable colors so the banner will compliment your website. Choose placement in the header or footer.](assets/screenshot-1.png)
 
-### The banner.
+### Example banner in Header
 
-![The banner.](assets/screenshot-2.png)
+![Example banner in Header](assets/screenshot-2.png)
+
+### Example banner in Footer
+
+![Example banner in Footer](assets/screenshot-3.png)
 
 ## Changelog ##
 
