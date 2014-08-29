@@ -23,6 +23,14 @@ body {
 body.admin-bar .utp-banner-container {
 	top: 32px;
 }
+@media all and (max-width: 599px) {
+	.utp-banner-container {
+		position: absolute;
+	}
+	body.admin-bar .utp-banner-container {
+		top: 46px;
+	}
+}
 <?php endif; ?>
 <?php if ( 'footer' === $placement ) : ?>
 body {
@@ -32,26 +40,39 @@ body {
 .utp-banner-container > * {
 	display: inline-block;
 	vertical-align: middle;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .utp-banner-logo-link img {
 	max-height: 34px;
 }
 .utp-banner-heading {
-	margin: 0 20px;
+	margin: 0 20px !important;
 	font-style: italic;
-	line-height: 36px;
-	color: <?php echo esc_attr( $headline_color ); ?>;
+	font-weight: bold;
+	font-size: 14px !important;
+	line-height: 36px !important;
+	color: <?php echo esc_attr( $headline_color ); ?> !important;
 }
 .utp-banner-button {
-	padding: 8px 14px;
+	padding: 8px 14px !important;
 	font-weight: normal;
+	font-size: 14px !important;
+	line-height: 14px !important;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #fff;
-	background-color: <?php echo esc_attr( $button_color ); ?>;
+	text-align: center !important;
+	color: #fff !important;
+	background-color: <?php echo esc_attr( $button_color ); ?> !important;
 	border-radius: 3px;
 	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+}
+@media all and (max-width: 599px) {
+	.utp-banner-logo-link img {
+		max-height: 28px;
+		margin-right: 15px;
+	}
+	.utp-banner-heading {
+		display: none;
+	}
 }
 </style>
 
@@ -61,7 +82,7 @@ body {
 		<img src="<?php echo esc_url( UTP_PLUGIN_URL . 'images/unicef-tap-project.png' ); ?>" />
 	</a>
 
-	<h1 class="utp-banner-heading"><?php _e( 'Every heart needs water.', 'unicef-tap-project-banner' ); ?></h1>
+	<span class="utp-banner-heading"><?php _e( 'Every heart needs water.', 'unicef-tap-project-banner' ); ?></span>
 
 	<a href="<?php echo esc_url( UTP_DONATE_LINK ) ?>" target="_blank" class="utp-banner-button">
 		<?php _e( 'Donate', 'unicef-tap-project-banner' ); ?>
