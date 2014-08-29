@@ -22,8 +22,8 @@ By displaying this banner on your website you are agreeing to the [UNICEF linkin
 == Screenshots ==
 
 1. Customizable colors so the banner will compliment your website. Choose placement in the header or footer.
-2. Example of banner in the Header
-3. Example of banner in the Footer
+2. Example of banner in the header.
+3. Example of banner in the footer.
 
 == Changelog ==
 
