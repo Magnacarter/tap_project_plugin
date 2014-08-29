@@ -166,6 +166,9 @@ class WordPress_Readme_Parser {
 		if ( file_exists( 'assets/banner-1544x500.png' ) ) {
 			$markdown .= '![Banner](assets/banner-1544x500.png)';
 			$markdown .= "\n";
+		} elseif ( file_exists( 'assets/banner-1544x500.jpg' ) ) {
+			$markdown .= '![Banner](assets/banner-1544x500.jpg)';
+			$markdown .= "\n";
 		}
 		$markdown .= sprintf( "%s\n", $this->short_description );
 		$markdown .= "\n";
