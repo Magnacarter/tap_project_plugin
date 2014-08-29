@@ -149,7 +149,7 @@ class UTP_Banner_Plugin {
 		$settings         = get_option( 'utp-settings', array() );
 		$background_color = ( isset( $settings['background_color'] ) && ! empty( $settings['background_color'] ) ) ? $settings['background_color'] : '#f5f5f5';
 		?>
-		<input type="text" name="utp-settings[background_color]" id="utp_background_color" class="utp-color-picker-input" value="<?php echo esc_attr( $background_color ) ?>" />
+		<input type="text" name="utp-settings[background_color]" id="utp_background_color" class="utp-color-picker-input" value="<?php echo esc_attr( $background_color ); ?>" />
 		<div class="utp-color-picker" rel="utp_background_color"></div>
 		<?php
 	}
@@ -158,7 +158,7 @@ class UTP_Banner_Plugin {
 		$settings       = get_option( 'utp-settings', array() );
 		$headline_color = ( isset( $settings['headline_color'] ) && ! empty( $settings['headline_color'] ) ) ? $settings['headline_color'] : '#222';
 		?>
-		<input type="text" name="utp-settings[headline_color]" id="utp_headline_color" class="utp-color-picker-input" value="<?php echo esc_attr( $headline_color ) ?>" />
+		<input type="text" name="utp-settings[headline_color]" id="utp_headline_color" class="utp-color-picker-input" value="<?php echo esc_attr( $headline_color ); ?>" />
 		<div class="utp-color-picker" rel="utp_headline_color"></div>
 		<?php
 	}
@@ -167,7 +167,7 @@ class UTP_Banner_Plugin {
 		$settings     = get_option( 'utp-settings', array() );
 		$button_color = ( isset( $settings['button_color'] ) && ! empty( $settings['button_color'] ) ) ? $settings['button_color'] : '#40aae1';
 		?>
-		<input type="text" name="utp-settings[button_color]" id="utp_button_color" class="utp-color-picker-input" value="<?php echo esc_attr( $button_color ) ?>" />
+		<input type="text" name="utp-settings[button_color]" id="utp_button_color" class="utp-color-picker-input" value="<?php echo esc_attr( $button_color ); ?>" />
 		<div class="utp-color-picker" rel="utp_button_color"></div>
 		<?php
 	}
@@ -221,6 +221,8 @@ class UTP_Banner_Plugin {
 				<?php do_settings_sections( 'unicef-tap-project-banner' ); ?>
 				<?php submit_button(); ?>
 			</form>
+			<p><em><?php _e( 'This plugin is in no way officially affiliated with UNICEF.', 'unicef-tap-project-banner' ); ?></em></p>
+			<p><em><?php printf( __( 'By displaying this banner on your website you are agreeing to the <a href="%s" target="_blank">UNICEF linking guidelines</a>.', 'unicef-tap-project-banner' ), esc_url( 'http://www.unicef.org/about/legal_linking.html' ) ); ?></em></p>
 		</div>
 		<?php
 	}
