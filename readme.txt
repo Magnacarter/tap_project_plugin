@@ -11,6 +11,8 @@ Display a banner on your website encouraging visitors to donate to the UNICEF Ta
 
 == Description ==
 
+**Did you find this plugin helpful? Please consider [leaving a 5-star review](https://wordpress.org/support/view/plugin-reviews/unicef-tap-project-banner).**
+
 Displays a simple donate banner in the header or footer of your website so your visitors can participate in giving to the UNICEF Tap Project.
 
 Learn more at [http://uniceftapproject.org](http://uniceftapproject.org)
@@ -30,3 +32,5 @@ By displaying this banner on your website you are agreeing to the [UNICEF linkin
 = 0.1.0 - August 29, 2014 =
 
 Initial release!
+
+Props [Magnacarter](https://github.com/Magnacarter), [fjarrett](https://github.com/fjarrett)
