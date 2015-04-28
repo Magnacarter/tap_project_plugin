@@ -8,7 +8,7 @@ Display a banner on your website encouraging visitors to donate to the UNICEF Ta
 **Requires at least:** 3.1  
 **Tested up to:** 4.2  
 **Stable tag:** 0.1.0  
-**License:** [GPLv3](http://www.gnu.org/licenses/gpl-3.0.html)  
+**License:** [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)  
 
 [![Build Status](https://travis-ci.org/Magnacarter/tap_project_plugin.png?branch=master)](https://travis-ci.org/Magnacarter/tap_project_plugin) 
 

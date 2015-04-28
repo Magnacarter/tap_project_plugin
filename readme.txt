@@ -5,7 +5,7 @@ Requires at least: 3.1
 Tested up to:      4.2
 Stable tag:        0.1.0
 License:           GPLv3
-License URI:       http://www.gnu.org/licenses/gpl-3.0.html
+License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
 Display a banner on your website encouraging visitors to donate to the UNICEF Tap Project.
 
