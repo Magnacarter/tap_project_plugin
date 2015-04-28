@@ -6,9 +6,9 @@ Display a banner on your website encouraging visitors to donate to the UNICEF Ta
 **Contributors:** [adamcarter](https://profiles.wordpress.org/adamcarter), [fjarrett](https://profiles.wordpress.org/fjarrett)  
 **Tags:** [charity](https://wordpress.org/plugins/tags/charity), [donations](https://wordpress.org/plugins/tags/donations), [donate](https://wordpress.org/plugins/tags/donate), [unicef](https://wordpress.org/plugins/tags/unicef), [clean water](https://wordpress.org/plugins/tags/clean water)  
 **Requires at least:** 3.1  
-**Tested up to:** 4.1  
+**Tested up to:** 4.2  
 **Stable tag:** 0.1.0  
-**License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
+**License:** [GPLv3](http://www.gnu.org/licenses/gpl-3.0.html)  
 
 [![Build Status](https://travis-ci.org/Magnacarter/tap_project_plugin.png?branch=master)](https://travis-ci.org/Magnacarter/tap_project_plugin) 
 
